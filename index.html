@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Text Below</h2>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button onclick="displayInput()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+        function displayInput() {
+            var input = document.getElementById("userInput").value;
+            document.getElementById("output").innerText = "You entered: " + input;
+        }
+    </script>
+</body>
+</html>
